@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Sigmar+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Harsh Agrawal</title>
+	
+	<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	html,body{
+		height: 100%;
+	}
+	body{
+		background: black;
+		overflow: hidden;
+	}
+	canvas{
+		z-index: -1;
+		position: absolute;
+		top:0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	h1{
+		color: white;
+		font-size:12vw;
+		font-family: 'Montserrat', sans-serif;
+		margin-top: 8%;
+		margin-left: 12.5%;
+		line-height: 13vw;
+	}
+	body{
+		background: url('/images/background.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	#firstName{
+		font-size: 12vw;
+		margin-left: 7.5%;
+		letter-spacing: 3vw;
+	}
+	#lastName{
+		margin-right: 10%;
+		letter-spacing: 2vw;
+	}
+	nav{
+		font-family: 'Bungee', cursive;
+		margin: auto;
+		background: white;
+		color:black;
+		font-size:1.5vw;
+		width: 75%;
+	}
+	nav div{
+		z-index: 200;
+		display: inline-block;
+		width: 30%;
+		text-align: center;
+	}
+	nav a{
+		color:black;
+		text-decoration: none;
+	}
+	</style>
+</head>
+<body>
+<canvas id="myCanvas";>LALA</canvas>
+<h1><span id="firstName">HARSH</span>
+<br> <span id="lastName">AGRAWAL</span></h1>
+<nav>
+	<div><a href="index.html">HOME</a>
+	</div>
+	<div><a href="blog.php">BLOG</a>
+	</div>
+	<div><a href="creations.html">CREATIONS</a>
+	</div>
+</nav>
+</body>
+
+<!-- <script>
+		var c = document.getElementById("myCanvas");
+		c.width = c.clientWidth;
+		c.height = c.clientHeight;
+		var ctx = c.getContext("2d");
+		circleSize = 3.25;
+		circlesInOneLine = parseInt(c.clientWidth/32*c.clientHeight/32);
+		circles = [];
+		for(i=0;i<circlesInOneLine;i++){
+			ctx.beginPath();
+			randomX = Math.floor(Math.random()*c.clientWidth);
+			randomY = Math.floor(Math.random()*c.clientHeight);
+			circles.push([randomX,randomY,Math.floor(Math.random()*circleSize/2)+circleSize/2]);
+			ctx.arc(randomX,randomY,4,0,2*Math.PI);
+			ctx.fillStyle = "white";
+			ctx.strokeStyle = "white";
+			ctx.fill();
+			ctx.stroke();
+		}
+
+		function redraw(){
+			ctx.clearRect(0,0,c.width,c.height);
+			for(i=0;i<circles.length;i++){
+				ctx.beginPath();
+				// circles[i][0] += 1;
+				if(circles[i][1] > c.clientHeight){
+					circles[i][1] = 0
+				}
+				else{
+					circles[i][1] += Math.floor(Math.random()*5)+5;
+				}
+				xPos = circles[i][0];
+				yPos = circles[i][1]
+				
+				ctx.arc(xPos,yPos,circles[i][2],0,2*Math.PI);
+				ctx.fillStyle = "white";
+				ctx.strokeStyle = "white";
+				ctx.fill();
+				ctx.stroke();
+			}
+		}
+		setInterval(redraw,50);
+</script> -->
+</html>
